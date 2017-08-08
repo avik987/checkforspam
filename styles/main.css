@@ -1,0 +1,29 @@
+body {
+
+	font-family: Verdana, Geneva, sans-serif;
+	padding: 0;
+	margin: 0;
+	min-width: 320px;
+}
+
+div.page_container {
+	margin: 0 auto;
+	max-width: 950px;
+	padding: 0 5px;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+}
+a:active, a:hover {
+	text-decoration: underline;
+}
+
+.error_text {
+	color: #900;
+	font-weight: bold;
+}
+
+div.content_bar {
+	padding-bottom: 40px;
+}

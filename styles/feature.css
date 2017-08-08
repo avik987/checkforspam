@@ -1,0 +1,64 @@
+
+/* FEATURE BAR */
+div#feature_bar {
+	background-image: url(http://www.checkforspam.com/images/feature_yellow.jpg);
+	background-position: left;
+	background-repeat: none;
+	background-size: cover;
+	height: 200px;
+	width: 100%;
+}
+
+div#feature_container {
+	display: table;
+	height: 200px;
+	width: 100%;
+}
+
+
+div#feature_exclamation {
+	display: table-cell;
+	vertical-align: middle;
+	width: 185px;
+}
+div#feature_exclamation img {
+	height: 180px;
+	margin: 10px 0;
+	width: 180px;
+}
+
+div#feature_headings_container {
+	display: table-cell;
+	vertical-align: middle;
+}
+div#header_line1 {
+}
+div#header_line1 div#l1_left {
+	display: table-cell;
+	font-size: 80px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+div#header_line1 div#l1_right {
+	display: table-cell;
+	vertical-align: top;
+	font-size: 37px;
+	font-weight: bold;
+	vertical-align: top;
+	padding: 10px;
+}
+div#header_line2 {
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+}
+
+div#feature_red_button {
+	display: table-cell;
+	vertical-align: middle;
+	width: 150px;
+}
+div#feature_red_button img {
+	height: 150px;
+	width: 150px;
+}
