@@ -206,8 +206,6 @@ foreach ($domains_full as $domain) {
 				$headers = 'From: webmaster@example.com' . "\r\n" .
 					'Reply-To: webmaster@example.com' . "\r\n" .
 					'X-Mailer: PHP/' . phpversion();
-				
-				var_dump(mail($user_data['email'], $subject, $alert_message, $headers));
 			}
 			
 			
