@@ -102,7 +102,6 @@ foreach ($ip_addresses as $ip_address => $spam_dbs) {
 
 // get current timestamp
 $current_time = time();
-
 // update list of domains
 foreach ($domains_full as $domain) {
 	
@@ -167,7 +166,7 @@ foreach ($domains_full as $domain) {
 				$downtime_data[$requested_spam_db] = array_values(array_filter($downtime_data[$requested_spam_db]));
 			}
 		}
-		
+
 		// reencode downtime
 		$downtime_data = json_encode($downtime_data);
 		// reencode responses
@@ -197,15 +196,18 @@ foreach ($domains_full as $domain) {
 			
 			if ($alert_message) {
 				// if message body has been created, then submit to user
-				
+
 				// get user data
 				$user_data = get_user_data_by_user_id($domain['user_id']);
-				
+			//	var_dump($user_data);die;
 				$subject = "CheckForSPAM Alert for " . $domain['domain'];
-				$alert_message_start = "Dear " . $user_data['firstname'] . " " . $user_data['lastname'] . ", \n\n";
-				$alert_message_end = "\n\n" . "Regards, \n" . "CheckForSPAM.com";	
+				$alert_message .= "Dear " . $user_data['firstname'] . " " . $user_data['lastname'] . ", \n\n";
+				$alert_message .= "\n\n" . "Regards, \n" . "CheckForSPAM.com";
+				$headers = 'From: webmaster@example.com' . "\r\n" .
+					'Reply-To: webmaster@example.com' . "\r\n" .
+					'X-Mailer: PHP/' . phpversion();
 				
-				send_email($user_data['email'], $subject, $alert_message_start . $alert_message . $alert_message_end);
+				var_dump(mail($user_data['email'], $subject, $alert_message, $headers));
 			}
 			
 			
