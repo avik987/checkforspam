@@ -10,6 +10,74 @@ $site_base_url = "http://spam.loc/"; //local
 // Spam servers
 global $spam_blacklist_servers;
 $spam_blacklist_servers = array(
+    // new dns
+    'SpamRates' =>'all.spamrats.com',
+    'RblJp' =>'all.rbl.jp',
+    'NosoliCitado' =>'bl.nosolicitado.org',
+    'scrolloutf1' =>'bl.rbl.scrolloutf1.com',
+    'senderscore' =>'bl.score.senderscore.com',
+    'junkemailfilter' =>'black.junkemailfilter.com',
+    'anti-spamCblLess' =>'cblless.anti-spam.org.cn',
+    'anti-spamCdl' =>'cdl.anti-spam.org.cn',
+    'rv-soft' =>'dnsbl.rv-soft.info',
+    'nszones' =>'dyn.nszones.com',
+    'escalations' =>'escalations.dnsbl.sorbs.net',
+    'fnrbl' =>'fnrbl.fast.net',
+    'l2_bbfh' =>'l2.bbfh.ext.sorbs.net',
+    'list_bbfh' =>'list.bbfh.org',
+    'netscan' =>'netscan.rbl.blockedservers.com',
+    'pbl' =>'pbl.spamhaus.org',
+    'pofon' =>'pofon.foobar.hu',
+    'proxies' =>'proxies.dnsbl.sorbs.net',
+    'efnetrbl' =>'rbl.efnetrbl.org',
+    'megarbl' =>'rbl.megarbl.net',
+    'recent' =>'recent.spam.dnsbl.sorbs.net',
+    'spamhausSbl' =>'sbl.spamhaus.org',
+    'pedantic' =>'spam.pedantic.org',
+    'msrbl' =>'spam.rbl.msrbl.net',
+    'spamlist' =>'spamlist.or.kr',
+    'technovision' =>'st.technovision.dk',
+    'talosintelligence' =>'talosintelligence.com',
+    'unsubscore' =>'ubl.unsubscore.com',
+    'spamhausXbl' =>'xbl.spamhaus.org',
+    'redhawk' =>'access.redhawk.org',
+    'aspews' =>'aspews.ext.sorbs.net',
+    'webiron' =>'babl.rbl.webiron.net', ///?????????
+    'barracudaCentralBb' =>'bb.barracudacentral.org',
+    'mailspike' =>'bl.mailspike.net',
+    'nszonesBl' =>'bl.nszones.com',
+    'scientificspam' =>'bl.scientificspam.net',
+    'suomispamBl' =>'bl.suomispam.net',
+    'cart00ney' =>'cart00ney.surriel.com',
+    'CasaPlus' =>'cblplus.anti-spam.org.cn',
+    'combined_msrbl' =>'combined.rbl.msrbl.net',
+    'justspam' =>'dnsbl.justspam.org',
+    'dnsblUa' =>'dnsbl.net.ua',
+    'rymsho' =>'dnsbl.rymsho.ru',
+    'tornevall' =>'dnsbl.tornevall.org',
+    'exitnodes' =>'exitnodes.tor.dnsbl.sectoor.de',
+    'hostkarma' =>'hostkarma.junkemailfilter.com',
+    'images' =>'images.rbl.msrbl.net',
+    'sorbsL1' =>'l1.bbfh.ext.sorbs.net',
+    'sorbsL4' =>'l4.bbfh.ext.sorbs.net',
+    'MailAbuse' =>'mail-abuse.blacklist.jippg.org',
+    'surblMulti' =>'multi.surbl.org',
+    'surbsSpamOld' =>'old.spam.dnsbl.sorbs.net',
+    'phishing' =>'phishing.rbl.msrbl.net',
+    'sorbsProblems' =>'problems.dnsbl.sorbs.net',
+    'efnet' =>'rbl.efnet.org',
+    'iprange' =>'rbl.iprange.net',
+    'sorbsRelays' =>'relays.dnsbl.sorbs.net',
+    'sorbsSafe' =>'safe.dnsbl.sorbs.net',
+    'shortJp' =>'short.rbl.jp',
+    'blockedserversSpam' =>'spam.rbl.blockedservers.com',
+    'IMPSpamRbl' =>'spamrbl.imp.ch',
+    'Surgate' =>'srn.surgate.net',
+    'WebIron' =>'stabl.rbl.webiron.net',
+    'msrblVirus' =>'virus.rbl.msrbl.net',
+    'msrblWeb' =>'web.rbl.msrbl.net',
+
+    //
     'Spamhaus' => 'zen.spamhaus.org',
     'SORBS' => 'dnsbl.sorbs.net',
     'DroneBL' => 'dnsbl.dronebl.org',
@@ -17,13 +85,13 @@ $spam_blacklist_servers = array(
     'SpamCop' => 'bl.spamcop.net',
     'ManiTu' => 'ix.dnsbl.manitu.net',
     'AbuseAt' => 'cbl.abuseat.org',
-    'ASPEWS' => "www.aspews.org",
+    'ASPEWS' => "www.aspews.org", //// ?????????
     'AbuseIP' => "rbl.abuse.ro",
     'AbuseDomain' => "dbl.abuse.ro",
     'AnonmailsDNSBL' => "spam.dnsbl.anonmails.de",
 
 //    'AntiCaptcha.NET IPv6' => "",
-//    'BACKSCATTERER' => "ips.backscatterer.org",
+    'BACKSCATTERER' => "ips.backscatterer.org",
 //    'BARRACUDA' => "barracudacentral.org/rbl",
 //    'BBFHL1' => "www.bbfh.org",
 //    'BBFHL2' => "www.bbfh.org",
@@ -99,7 +167,7 @@ $spam_blacklist_servers = array(
     'ICMFORBIDDEN' => "dnsrbl.swinog.ch",
 //    'IMPSPAM' => "antispam.imp.ch/?lng=1",
 //    'IMPWORM' => "antispam.imp.ch/?lng=1",
-//    'INPS_DE' => "dnsbl.inps.de/index.cgi?lang=en&site=00001",
+    'INPS_DE' => "dnsbl.inps.de",
     'INTERSERVER' => "rbldata.interserver.net",
     'IPrangeRBLProject' => "rbl.realtimeblacklist.com",
     'JIPPG' => "dialup.blacklist.jippg.org",
@@ -128,7 +196,7 @@ $spam_blacklist_servers = array(
     'RATSDyna' => "dyna.spamrats.com",
     'RATSNoPtr' => "noptr.spamrats.com",
     'RATSSpam' => "spam.spamrats.com",
-    'RBLJP' => "RBL.JP",
+    'RBLJP' => "RBL.JP",  ///???
     'RSBL' => "rsbl.aupads.org",
     'SCHULTE' => "cbl.abuseat.org, etc",
     'SECTOOREXITNODES' => "www.sectoor.de/tor.php",
@@ -166,7 +234,7 @@ $spam_blacklist_servers = array(
 //    'SORBS RHSBL NOMAIL' => undefined,
 
     'SORBSSMTP' => "smtp.dnsbl.sorbs.net",
-    'SORBSSOCKS' => "socks.dnsbl.sorbs.net",
+    'SORBSSOCKS' => "socks.dnsbl.sorbs.net", //???????
     'SORBSSPAM' => "spam.dnsbl.sorbs.net",
     'SORBSWEB' => "web.dnsbl.sorbs.net",
     'SORBSZOMBIE' => "zombie.dnsbl.sorbs.net",
@@ -225,7 +293,7 @@ $db_servername = "localhost";
 //$db_password = "mk#w9%ww??r~";
 // local db access
 $db_username = "root";
-$db_password = "123";
+$db_password = "123123";
 $db_name = "checkfor_main";
 
 ?>
