@@ -40,12 +40,37 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>CheckForSPAM | Registration</title>
-    <link href="styles/main.css" rel="stylesheet" type="text/css" />
-    <link href="styles/top.css" rel="stylesheet" type="text/css" />
-    <link href="styles/feature.css" rel="stylesheet" type="text/css" />
-    <link href="styles/myaccount.css" rel="stylesheet" type="text/css" />
-    <link href="styles/footer.css" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Easy Admin Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<title>CheckForSPAM | Registration</title>
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- Bootstrap Core CSS -->
+	<link href="./styles/bootstrap.min.css" rel='stylesheet' type='text/css' />
+	<!-- Custom CSS -->
+	<link href="./styles/style.css" rel='stylesheet' type='text/css' />
+	<!-- Graph CSS -->
+	<link href="./styles/font-awesome.css" rel="stylesheet">
+	<!-- jQuery -->
+	<!-- lined-icons -->
+	<link rel="stylesheet" href="./styles/icon-font.min.css" type='text/css' />
+	<!-- //lined-icons -->
+	<!-- chart -->
+	<script src="./js/Chart.js"></script>
+	<!-- //chart -->
+	<!--animate-->
+	<link href="./styles/animate.css" rel="stylesheet" type="text/css" media="all">
+	<script src="./js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<!--//end-animate-->
+	<!----webfonts--->
+	<link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+	<!---//webfonts--->
+	<!-- Meters graphs -->
+	<script src="./js/jquery-1.10.2.min.js"></script>
+	<!-- Placed js at the end of the document so the pages load faster -->
 
         <meta id='vp' name="viewport" content="width=device-width, initial-scale=1">
     <script>
@@ -57,40 +82,79 @@
 		</script>
 </head>
 
-<body>
+<body class="sign-in-up">
+<section>
+	<div id="page-wrapper" class="sign-in-wrapper">
+		<div class="graphs">
+			<div class="sign-up">
+				<h3>Register Here</h3>
+				<h5>Personal Information</h5>
+				<div class="form_result"><?php echo $result; ?></div>
+				<div class="form_output"><?php echo $output; ?></div>
+				<form action="/register.php" method="post">
 
-<div id="top_bar">
-	<?php include 'template_parts/template_top.php'; ?>
-</div>
+					<div class="sign-u">
+						<div class="sign-up1">
+							<h4>First Name* :</h4>
+						</div>
+						<div class="sign-up2">
+							<input type="text"  name="firstname" placeholder="First Name " />
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="sign-u">
+						<div class="sign-up1">
+							<h4>Last Name* :</h4>
+						</div>
+						<div class="sign-up2">
+							<input type="text" name="lastname" placeholder="Last Name" />
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="sign-u">
+						<div class="sign-up1">
+							<h4>Email Address* :</h4>
+						</div>
+						<div class="sign-up2">
+							<input type="text" name="email" placeholder="E-Mail Address"/>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<h6>Login Information</h6>
+					<div class="sign-u">
+						<div class="sign-up1">
+							<h4>Password* :</h4>
+						</div>
+						<div class="sign-up2">
+							<input type="password" name="password" placeholder="Password"/>
 
-<div id="content_bar">
-	<div class="page_container">
-    	
-		<p class="page_feature_title">Create an account</p>
-        
-        <div class="form_result"><?php echo $result; ?></div>
-        <div class="form_output"><?php echo $output; ?></div>
-        
-        <div class="form_container">
-        	<form action="/register.php" method="post">
-                <input type="text" name="firstname" placeholder="First Name" />
-                <input type="text" name="lastname" placeholder="Last Name" />
-                <input type="text" name="email" placeholder="E-Mail Address" />
-                <input type="password" name="password" placeholder="Password" />
-                <input type="submit" name="submit" value="Create Account" />
-            </form>
-        
-        </div>
-        
-    </div>
-</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="sub_home">
+						<div class="sub_home_left">
+							<input type="submit" name="submit" value="Create Account">
+						</div>
+						<div class="sub_home_right">
+							<p>Go Back to <a href="index.php">Home</a></p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!--footer section start-->
+	<footer>
+		<p>        	&copy;2017 CheckForSPAM.com
+		</p>
+	</footer>
+	<!--footer section end-->
+</section>
 
-
-<div id="footer_bar">
-	<?php include 'template_parts/template_footer.php'; ?>
-</div>
-
-
-
+<script src="./js/jquery.nicescroll.js"></script>
+<script src="./js/scripts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="./js/bootstrap.min.js"></script>
 </body>
 </html>

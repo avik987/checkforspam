@@ -45,15 +45,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>CheckForSPAM - Website Monitoring - Login</title>
-	<link href="styles/main.css" rel="stylesheet" type="text/css" />
-    <link href="styles/top.css" rel="stylesheet" type="text/css" />
-    <link href="styles/feature.css" rel="stylesheet" type="text/css" />
-    <link href="styles/myaccount.css" rel="stylesheet" type="text/css" />
-	<link href="styles/footer.css" rel="stylesheet" type="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Easy Admin Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="" src="js/jquery-1.10.2.min.js"></script>
 
-        <meta id='vp' name="viewport" content="width=device-width, initial-scale=1">
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<link href="styles/bootstrap.min.css" rel='stylesheet' type='text/css' />
+	<link href="styles/style.css" rel='stylesheet' type='text/css' />
+	<link href="styles/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="./styles/icon-font.min.css" type='text/css' />
+	<script src="js/Chart.js"></script>
+	<link href="styles/animate.css" rel="stylesheet" type="text/css" media="all">
+	<script src="js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+
+	<meta id='vp' name="viewport" content="width=device-width, initial-scale=1">
     <script>
 		if (screen.width < 500)
 		{
@@ -62,37 +74,66 @@
 		}
 		</script>
 </head>
+<body class="sign-in-up">
+<section>
+	<div id="page-wrapper" class="sign-in-wrapper">
+		<div class="graphs">
+			<div class="sign-in-form">
+				<div class="sign-in-form-top">
+					<p><span>Sign In to</span> <a href="index.html">Admin</a></p>
+				</div>
+				<div class="signin">
+					<div class="signin-rit">
+								<span class="checkbox1">
+									 <label class="checkbox"><input type="checkbox" name="checkbox" checked="">Forgot Password ?</label>
+								</span>
+						<p><a href="#">Click Here</a> </p>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="form_result"><?php echo $result; ?></div>
+					<form action="/login.php" method="post">
+						<div class="log-input">
+							<div class="log-input-left">
+								<input type="text" class="user" name="email" value="Yourmail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email address:';}"/>
+							</div>
+								<span class="checkbox2">
+									 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i></label>
+								</span>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="log-input">
+							<div class="log-input-left">
+								<input type="password" name="password" class="lock" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email address:';}"/>
+							</div>
+								<span class="checkbox2">
+									 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i></label>
+								</span>
+							<div class="clearfix"> </div>
+						</div>
+						<input type="submit" name="submit" value="Login to your account">
+					</form>
+				</div>
+				<div class="new_people">
+					<h4>For New People</h4>
+					<p>Having hands on experience in creating innovative designs,I do offer design
+						solutions which harness.</p>
+					<a href="register.php">Register Now!</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--footer section start-->
+	<footer>
+		<p>        	&copy;2017 CheckForSPAM.com
+		</p>
+	</footer>
+	<!--footer section end-->
+</section>
 
-<body>
-
-<div id="top_bar">
-	<?php include 'template_parts/template_top.php'; ?>
-</div>
-
-
-
-<div id="content_bar">
-	<div class="page_container">
-    	
-		<p class="page_feature_title">Access your account</p>
-        
-        <div class="form_result"><?php echo $result; ?></div>
-        
-        <div class="form_container">
-        	<form action="/login.php" method="post">
-                <input type="text" name="email" placeholder="E-Mail Address" />
-                <input type="password" name="password" placeholder="Password" />
-                <input type="submit" name="submit" value="Login" />
-            </form>
-        
-        </div>
-        
-    </div>
-</div>
-
-<div id="footer_bar">
-	<?php include 'template_parts/template_footer.php'; ?>
-</div>
-
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+

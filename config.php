@@ -293,7 +293,7 @@ $db_servername = "localhost";
 //$db_password = "mk#w9%ww??r~";
 // local db access
 $db_username = "root";
-$db_password = "123123";
+$db_password = "123";
 $db_name = "checkfor_main";
 
 ?>

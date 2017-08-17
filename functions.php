@@ -654,9 +654,24 @@ function get_domain_only($url) {
 	return $domain;
 
 }
+function get_user_dbl(){
+	$query = "SELECT * FROM " . $GLOBALS['db_name'] . ".websites";
+	$result = $GLOBALS['db_connection'] -> query($query);
+	$dbl_list = array();
+
+	if ($result -> num_rows > 0) {
+		while($row = $result -> fetch_assoc()) {
+			$dbl_list[] = array($row['responses'], $row['downtime']);
+		}
+		return $dbl_list;
+	} else {
+		return FALSE;
+	}
+
+}
 
 function get_users_list() {
-	$session_id = make_safe($session_id);
+//	$session_id = make_safe($session_id);
 		
 	$query = "SELECT * FROM " . $GLOBALS['db_name'] . ".users ORDER BY user_id ASC";
 	$result = $GLOBALS['db_connection'] -> query($query);
